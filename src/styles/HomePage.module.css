@@ -1,20 +1,43 @@
 .pageShell {
   padding: 32px 24px 56px;
-  color: #121212;
+  color: #f4f4ef;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #050505 0%, #0d0d0d 100%);
 }
 
 .hero {
   max-width: 1200px;
   margin: 0 auto 32px;
   padding: 36px;
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 28px;
-  background: #f7f7f2;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(145deg, #0f0f0f 0%, #080808 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
   display: grid;
   grid-template-columns: 1.4fr 0.8fr;
   gap: 24px;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer 6s linear infinite;
 }
 
 .eyebrow {
@@ -22,21 +45,22 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   font-size: 12px;
-  color: #666666;
+  color: #9c9c9c;
 }
 
 .hero h1 {
   margin: 0 0 10px;
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 54px;
   line-height: 1;
+  letter-spacing: 0.04em;
 }
 
 .heroCopy {
   margin: 0 0 24px;
   max-width: 560px;
   font-size: 18px;
-  color: #3f3f3f;
+  color: #c9c9c0;
 }
 
 .heroActions {
@@ -45,8 +69,7 @@
   gap: 12px;
 }
 
-.primaryButton,
-.secondaryButton {
+.primaryButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -54,23 +77,17 @@
   border-radius: 999px;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.primaryButton:hover,
-.secondaryButton:hover {
-  transform: translateY(-2px);
-}
-
-.primaryButton {
-  background: #111111;
-  color: #fdfdf9;
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  background: #ffffff;
+  color: #050505;
   font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.secondaryButton {
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  color: #111111;
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.12);
 }
 
 .heroCard {
@@ -78,8 +95,14 @@
   padding: 28px;
   border-radius: 24px;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffffff 0%, #ebebeb 100%);
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  animation: floatCard 4s ease-in-out infinite;
 }
 
 .heroCardGlow {
@@ -88,7 +111,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.12);
   filter: blur(32px);
 }
 
@@ -97,7 +120,7 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  color: #666666;
+  color: #b1b1aa;
 }
 
 .heroCard h2 {
@@ -107,7 +130,7 @@
 
 .heroCard p {
   margin: 0;
-  color: #404040;
+  color: #d7d7d0;
 }
 
 .catalogSection {
@@ -130,7 +153,7 @@
 
 .toolbar p {
   margin: 0;
-  color: #666666;
+  color: #8f8f88;
 }
 
 .controls {
@@ -141,11 +164,28 @@
 
 .searchInput,
 .selectWrap select {
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  background: #ffffff;
-  color: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f7f7f2;
   padding: 12px 14px;
   border-radius: 999px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.selectWrap select option {
+  background: #0a0a0a;
+  color: #f7f7f2;
+}
+
+.searchInput:focus,
+.selectWrap select:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
 .searchInput {
@@ -158,18 +198,34 @@
   gap: 8px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .selectWrap span {
   font-size: 13px;
-  color: #444444;
+  color: #c7c7bd;
 }
 
 .songGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @media (max-width: 980px) {

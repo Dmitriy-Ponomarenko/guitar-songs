@@ -8,8 +8,8 @@
     sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #121212;
-  background: #f3f3f0;
+  color: #f4f4ef;
+  background: #050505;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f9f9f6 0%, #ecece7 100%);
+  background: linear-gradient(135deg, #050505 0%, #0d0d0d 100%);
 }
 
 a {

@@ -26,12 +26,6 @@ export function SongCard({ song }: SongCardProps) {
         <h4>{song.title}</h4>
         <p className={styles.artist}>{song.artist}</p>
         <p className={styles.description}>{song.description}</p>
-        <a
-          className={styles.button}
-          href={`mailto:hello@example.com?subject=${encodeURIComponent(`Заказ песни: ${song.title}`)}`}
-        >
-          Заказать песню
-        </a>
       </div>
     </article>
   );
