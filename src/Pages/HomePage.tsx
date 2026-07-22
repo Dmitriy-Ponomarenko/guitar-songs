@@ -1095,44 +1095,194 @@ const songs: Song[] = [
     description: "Приключенческая композиция о путешествии на лодке.",
   },
   {
-    id: 108,
-    title: "Човен",
-    artist: "Один в каное",
-    genre: "Рок",
-    mood: "Путешествие",
+    id: 109,
+    title: "На руках",
+    artist: "БРЕДИШЬ",
+    genre: "Хип-хоп",
+    mood: "Энергичная",
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
-    description: "Приключенческая композиция о путешествии на лодке.",
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Песня про любовь с кучей энергии",
   },
   {
-    id: 108,
-    title: "Човен",
-    artist: "Один в каное",
-    genre: "Рок",
-    mood: "Путешествие",
+    id: 110,
+    title: "LET THE WORLD BURN",
+    artist: "Chris Grey",
+    genre: "Alternative / Dark Pop",
+    mood: "Мрачная",
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
-    description: "Приключенческая композиция о путешествии на лодке.",
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Темная и эмоциональная песня о внутренних переживаниях и разрушительных чувствах.",
   },
   {
-    id: 108,
-    title: "Човен",
-    artist: "Один в каное",
-    genre: "Рок",
-    mood: "Путешествие",
+    id: 111,
+    title: "Люби меня долго",
+    artist: "EXNLXDE и Ирина Дубцова",
+    genre: "Поп",
+    mood: "Романтичная",
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
-    description: "Приключенческая композиция о путешествии на лодке.",
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Лиричный дуэт о желании сохранить любовь как можно дольше.",
   },
   {
-    id: 108,
-    title: "Човен",
-    artist: "Один в каное",
-    genre: "Рок",
-    mood: "Путешествие",
+    id: 112,
+    title: "i crash, u crash",
+    artist: "Lil Peep ft. Lil Tracy",
+    genre: "Emo Rap",
+    mood: "Грустная",
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
-    description: "Приключенческая композиция о путешествии на лодке.",
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Меланхоличная композиция о любви, боли и эмоциональной зависимости.",
+  },
+  {
+    id: 113,
+    title: "Дороги",
+    artist: "ДДТ",
+    genre: "Русский рок",
+    mood: "Задумчивая",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Философская песня о жизненном пути, выборе и судьбе.",
+  },
+  {
+    id: 114,
+    title: "Немерено",
+    artist: "лампабикт и Элли на маковом поле",
+    genre: "Инди",
+    mood: "Спокойная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Атмосферная композиция с мечтательным настроением и теплыми образами.",
+  },
+  {
+    id: 115,
+    title: "Прогулки по воде",
+    artist: "Наутилус Помпилиус",
+    genre: "Русский рок",
+    mood: "Загадочная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Легендарная песня с глубокими библейскими аллюзиями и философским смыслом.",
+  },
+  {
+    id: 116,
+    title: "Выхода нет",
+    artist: "Сплин",
+    genre: "Русский рок",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Культовая композиция о безысходности и поиске внутреннего выхода.",
+  },
+  {
+    id: 117,
+    title: "Варвара",
+    artist: "Би-2",
+    genre: "Русский рок",
+    mood: "Меланхоличная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Эмоциональная песня о любви, расставании и сильных чувствах.",
+  },
+  {
+    id: 118,
+    title: "Пачка сигарет",
+    artist: "Кино",
+    genre: "Русский рок",
+    mood: "Задумчивая",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Одна из самых известных песен Виктора Цоя о поиске смысла и надежды.",
+  },
+  {
+    id: 119,
+    title: "Кукушка",
+    artist: "Кино",
+    genre: "Русский рок",
+    mood: "Воодушевляющая",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Сильная и символичная композиция о выборе, судьбе и силе духа.",
+  },
+  {
+    id: 120,
+    title: "Туман",
+    artist: "Сектор Газа",
+    genre: "Рок",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Лирическая песня о воспоминаниях, потерях и надежде.",
+  },
+  {
+    id: 121,
+    title: "Я свободен",
+    artist: "Кипелов",
+    genre: "Хеви-метал",
+    mood: "Воодушевляющая",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Мощный рок-гимн о свободе, силе воли и независимости.",
+  },
+  {
+    id: 122,
+    title: "Как на войне",
+    artist: "Агата Кристи",
+    genre: "Русский рок",
+    mood: "Драматичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Эмоциональная композиция о сложных отношениях и внутренних конфликтах.",
+  },
+  {
+    id: 123,
+    title: "Молодые ветра",
+    artist: "7Б",
+    genre: "Русский рок",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Драйвовая песня о молодости, свободе и стремлении вперед.",
+  },
+  {
+    id: 124,
+    title: "Мое сердце",
+    artist: "Сплин",
+    genre: "Русский рок",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Трогательная композиция о любви, надежде и чувствах.",
+  },
+  {
+    id: 125,
+    title: "Лесник",
+    artist: "Король и Шут",
+    genre: "Панк-рок",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Знаменитая мистическая история с фирменной энергетикой группы.",
+  },
+  {
+    id: 126,
+    title: "Кукла колдуна",
+    artist: "Король и Шут",
+    genre: "Панк-рок",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Культовая рок-баллада с мистическим сюжетом и запоминающимся припевом.",
   },
 ];
 
