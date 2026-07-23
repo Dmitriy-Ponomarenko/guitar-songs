@@ -69,7 +69,8 @@
   gap: 12px;
 }
 
-.primaryButton {
+.primaryButton,
+.secondaryButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -79,15 +80,32 @@
     transform 0.2s ease,
     box-shadow 0.2s ease,
     border-color 0.2s ease;
-  background: #ffffff;
-  color: #050505;
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
 }
 
-.primaryButton:hover {
+.primaryButton {
+  background: #ffffff;
+  color: #050505;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4f4ef;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(255, 255, 255, 0.12);
+}
+
+.secondaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .heroCard {
@@ -199,6 +217,40 @@
   padding: 6px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
+  position: relative;
+}
+
+.selectWrap select {
+  padding-right: 24px;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.selectWrap select::-webkit-outer-spin-button,
+.selectWrap select::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.selectWrap::after {
+  margin-right: 10px;
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #c7c7bd;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.selectWrapOpen::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .selectWrap span {
@@ -210,6 +262,76 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 3, 3, 0.72);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+  animation: fadeIn 0.25s ease;
+}
+
+.modalCard {
+  width: min(100%, 480px);
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(145deg, #111111 0%, #080808 100%);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  animation: modalSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalEyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #9c9c9c;
+}
+
+.modalCard h3 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.modalArtist {
+  margin: 0 0 12px;
+  color: #bdbdb2;
+  font-size: 16px;
+}
+
+.modalDescription {
+  margin: 0 0 20px;
+  color: #dcdcd3;
+  line-height: 1.6;
+}
+
+.modalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.scrollTopButton {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4f4ef;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
+  z-index: 40;
 }
 
 @keyframes shimmer {
@@ -225,6 +347,26 @@
   }
   50% {
     transform: translateY(-6px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -258,5 +400,10 @@
 
   .songGrid {
     grid-template-columns: 1fr;
+  }
+
+  .scrollTopButton {
+    right: 16px;
+    bottom: 16px;
   }
 }

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SongCard } from "../Components/SongCard";
 import styles from "../styles/HomePage.module.css";
 
@@ -1546,6 +1546,21 @@ const songs: Song[] = [
 export function HomePage() {
   const [query, setQuery] = useState("");
   const [sortBy, setSortBy] = useState<"title" | "artist" | "genre">("title");
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showRandomModal, setShowRandomModal] = useState(false);
+  const [randomSong, setRandomSong] = useState<Song | null>(null);
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const filteredSongs = useMemo(() => {
     const loweredQuery = query.toLowerCase();
@@ -1559,6 +1574,21 @@ export function HomePage() {
 
     return [...items].sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
   }, [query, sortBy]);
+
+  const handleRandomSong = () => {
+    if (!filteredSongs.length) {
+      return;
+    }
+
+    const pickedSong =
+      filteredSongs[Math.floor(Math.random() * filteredSongs.length)];
+    setRandomSong(pickedSong);
+    setShowRandomModal(true);
+  };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className={styles.pageShell}>
@@ -1574,6 +1604,14 @@ export function HomePage() {
             <a className={styles.primaryButton} href="#catalog">
               Смотреть репертуар
             </a>
+            <button
+              className={styles.secondaryButton}
+              type="button"
+              onClick={handleRandomSong}
+              disabled={!filteredSongs.length}
+            >
+              🎲 Случайная песня
+            </button>
           </div>
         </div>
         <div className={styles.heroCard}>
@@ -1598,13 +1636,21 @@ export function HomePage() {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
             />
-            <label className={styles.selectWrap}>
+            <label
+              className={
+                isSelectOpen
+                  ? `${styles.selectWrap} ${styles.selectWrapOpen}`
+                  : styles.selectWrap
+              }
+            >
               <span>Сортировка</span>
               <select
                 value={sortBy}
                 onChange={(event) =>
                   setSortBy(event.target.value as "title" | "artist" | "genre")
                 }
+                onFocus={() => setIsSelectOpen(true)}
+                onBlur={() => setIsSelectOpen(false)}
               >
                 <option value="title">По названию</option>
                 <option value="artist">По исполнителю</option>
@@ -1620,6 +1666,52 @@ export function HomePage() {
           ))}
         </section>
       </main>
+
+      {showRandomModal && randomSong && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setShowRandomModal(false)}
+        >
+          <div
+            className={styles.modalCard}
+            role="dialog"
+            aria-modal="true"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <p className={styles.modalEyebrow}>Случайная подборка</p>
+            <h3>{randomSong.title}</h3>
+            <p className={styles.modalArtist}>{randomSong.artist}</p>
+            <p className={styles.modalDescription}>{randomSong.description}</p>
+            <div className={styles.modalActions}>
+              <button
+                className={styles.primaryButton}
+                type="button"
+                onClick={handleRandomSong}
+              >
+                Ещё раз
+              </button>
+              <button
+                className={styles.secondaryButton}
+                type="button"
+                onClick={() => setShowRandomModal(false)}
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showScrollTop && (
+        <button
+          className={styles.scrollTopButton}
+          type="button"
+          onClick={handleScrollToTop}
+          aria-label="Наверх страницы"
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 }
