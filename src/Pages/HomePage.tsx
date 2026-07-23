@@ -1284,6 +1284,263 @@ const songs: Song[] = [
     description:
       "Культовая рок-баллада с мистическим сюжетом и запоминающимся припевом.",
   },
+  {
+    id: 127,
+    title: "Beggin'",
+    artist: "Måneskin",
+    genre: "Рок",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Взрывной рок-кавер с мощным вокалом и драйвовой энергетикой.",
+  },
+  {
+    id: 128,
+    title: "Мальчик",
+    artist: "Фогель",
+    genre: "Поп",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Лиричная песня о взрослении, чувствах и первой любви.",
+  },
+  {
+    id: 129,
+    title: "Без тебя я не я",
+    artist: "JONY, HammAli & Navai",
+    genre: "Поп",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Эмоциональная композиция о любви, без которой жизнь теряет смысл.",
+  },
+  {
+    id: 130,
+    title: "Возле дома твоего",
+    artist: "Zhenis",
+    genre: "Поп",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Нежная песня о влюбленности и ожидании встречи.",
+  },
+  {
+    id: 131,
+    title: "Думаю о тебе",
+    artist: "Damir Mate",
+    genre: "Поп",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Легкая композиция о постоянных мыслях о любимом человеке.",
+  },
+  {
+    id: 132,
+    title: "Shape of You",
+    artist: "Ed Sheeran",
+    genre: "Поп",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Мировой хит с танцевальным ритмом и романтической историей.",
+  },
+  {
+    id: 133,
+    title: "У мене немає дому",
+    artist: "Один в каное",
+    genre: "Инди",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Глубокая украинская композиция о поиске дома и самого себя.",
+  },
+  {
+    id: 134,
+    title: "Патрон",
+    artist: "Miyagi & Andy Panda",
+    genre: "Хип-хоп",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Стильный трек с фирменной атмосферой и глубоким посылом.",
+  },
+  {
+    id: 135,
+    title: "Первое свидание",
+    artist: "Алёна Швец",
+    genre: "Инди-поп",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Милая история о первых чувствах и волнении перед встречей.",
+  },
+  {
+    id: 136,
+    title: "Сентябрь",
+    artist: "Stigmata",
+    genre: "Металкор",
+    mood: "Драматичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Эмоциональная рок-композиция о потерях, воспоминаниях и боли.",
+  },
+  {
+    id: 137,
+    title: "Самолёты",
+    artist: "Женя Трофимов и Комната Культуры",
+    genre: "Инди-рок",
+    mood: "Меланхоличная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Атмосферная песня о расстоянии, надежде и чувствах.",
+  },
+  {
+    id: 138,
+    title: "Выхода нет",
+    artist: "Сплин",
+    genre: "Русский рок",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Культовая композиция о безысходности и поиске внутреннего выхода.",
+  },
+  {
+    id: 139,
+    title: "Титры",
+    artist: "JONY",
+    genre: "Поп",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Лиричная песня о завершении отношений и воспоминаниях.",
+  },
+  {
+    id: 140,
+    title: "Белая кошка",
+    artist: "Мельница",
+    genre: "Фолк-рок",
+    mood: "Спокойная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Сказочная композиция с атмосферой магии и легенд.",
+  },
+  {
+    id: 141,
+    title: "Ты куришь так часто",
+    artist: "КИССКОЛД",
+    genre: "Поп-панк",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Эмоциональная песня о непростых отношениях и переживаниях.",
+  },
+  {
+    id: 142,
+    title: "Одержимый",
+    artist: "Keendy",
+    genre: "Хип-хоп",
+    mood: "Мрачная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Трек о навязчивых чувствах, страсти и внутренней борьбе.",
+  },
+  {
+    id: 143,
+    title: "Девочка с каре",
+    artist: "МУККА",
+    genre: "Поп-панк",
+    mood: "Энергичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Яркая песня о юношеской любви и эмоциональных переживаниях.",
+  },
+  {
+    id: 144,
+    title: "Тёмно-Оранжевый Закат",
+    artist: "Папин Олимпос",
+    genre: "Инди-рок",
+    mood: "Меланхоличная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Атмосферная композиция с ностальгическим осенним настроением.",
+  },
+  {
+    id: 145,
+    title: "На небі",
+    artist: "Океан Ельзи",
+    genre: "Рок",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Лиричная украинская песня о любви и надежде.",
+  },
+  {
+    id: 146,
+    title: "Без бою",
+    artist: "Океан Ельзи",
+    genre: "Рок",
+    mood: "Воодушевляющая",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Одна из самых известных песен группы о борьбе за любовь.",
+  },
+  {
+    id: 147,
+    title: "Обійми",
+    artist: "Океан Ельзи",
+    genre: "Рок",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Проникновенная композиция о близости, любви и ожидании встречи.",
+  },
+  {
+    id: 148,
+    title: "Как ты там",
+    artist: "Твойвоздух",
+    genre: "Инди",
+    mood: "Грустная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Нежная песня о тоске по дорогому человеку.",
+  },
+  {
+    id: 149,
+    title: "Сансара",
+    artist: "Баста",
+    genre: "Хип-хоп",
+    mood: "Задумчивая",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Философская композиция о жизни, семье и преемственности поколений.",
+  },
+  {
+    id: 150,
+    title: "Подари мне солнце",
+    artist: "Ярослав Сафронов",
+    genre: "Поп",
+    mood: "Романтичная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description: "Теплая песня о любви, надежде и желании быть рядом.",
+  },
+  {
+    id: 151,
+    title: "High By The Beach",
+    artist: "Lana Del Rey",
+    genre: "Dream Pop",
+    mood: "Спокойная",
+    image:
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80",
+    description:
+      "Атмосферная композиция с расслабленным звучанием и кинематографичным настроением.",
+  },
 ];
 
 export function HomePage() {
